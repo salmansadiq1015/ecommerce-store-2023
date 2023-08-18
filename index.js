@@ -9,12 +9,17 @@ import productsRoute from "./routes/productsRoute.js";
 import contactRoute from "./routes/contactRoute.js";
 import cors from "cors";
 import path from "path";
+import { fileURLToPath } from "url";
 
 // Config-Dotenv
 dotenv.config();
 
 // DataBase Configration
 connectDB();
+
+// Esmodules Fixed
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Rest Object
 const app = express();
